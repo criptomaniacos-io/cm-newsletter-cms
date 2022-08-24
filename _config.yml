@@ -1,0 +1,32 @@
+source: "./src"
+
+destination: "./public"
+
+timezone: "America/Sao_Paulo"
+
+future: true
+
+url: https://mail.criptomaniacos.io
+
+collections:
+  authors:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "fabricio"
+      body:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+

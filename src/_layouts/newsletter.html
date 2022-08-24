@@ -1,0 +1,96 @@
+<!DOCTYPE html 666>
+<html
+  lang="pt-br"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta name="format-detection" content="date=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <title>{{page.title}}</title>
+    {% seo %}
+    <!--[if mso]>
+      <noscript>
+        <xml>
+          <o:OfficeDocumentSettings>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+          </o:OfficeDocumentSettings>
+        </xml>
+      </noscript>
+    <![endif]-->
+    {% if jekyll.environment == "development" %}
+    <style>
+      i {
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+    </style>
+    {% endif %}
+    <style>
+      table,
+      td,
+      div,
+      h1,
+      p {
+        font-family: Arial, sans-serif;
+      }
+    </style>
+    <script>
+      var css =
+          ".EmailOnly { display: none !important; height: 0 !important; width: 0 !important; overflow: hidden !important; }",
+        head = document.head || document.getElementsByTagName("head")[0],
+        style = document.createElement("style");
+      head.appendChild(style);
+      style.type = "text/css";
+      if (style.styleSheet) {
+        // This is required for IE8 and below.
+        style.styleSheet.cssText = css;
+      } else {
+        style.appendChild(document.createTextNode(css));
+      }
+    </script>
+  </head>
+  <body style="margin: 0; padding: 0; background: #141414; color: #000">
+    <div
+      class="EmailOnly"
+      style="display: inline-block; width: 100%; background: #fff"
+    >
+      <p
+        style="
+          text-align: center;
+          font-size: 14px;
+          line-height: 140%;
+          max-width: 300px;
+          margin: 0 auto;
+        "
+      >
+        <a
+          rel="noopener"
+          href="{{site.url}}{{page.url}}"
+          target="_blank"
+          style="text-decoration: none; color: #113366"
+          >Está com dificuldade para ler este e-mail? Clique aqui.</a
+        >
+      </p>
+    </div>
+    <table
+      role="presentation"
+      {{page.props.rootTable}}
+      style="
+        width: 100%;
+        border-collapse: collapse;
+        border: 0;
+        border-spacing: 0;
+        font-family: Arial, sans-serif;
+      "
+    >
+      <tr>
+        <td align="center">{{content}}</td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+---
+layout: newsletter
+---
+
+<table
+  role="presentation"
+  style="
+    max-width: 600px;
+    min-width: 320px;
+    border-collapse: collapse;
+    border: 0px solid transparent;
+    border-spacing: 0;
+    text-align: left;
+  "
+>
+  <tr>
+    <td style="padding: 0">
+      <table
+        role="presentation"
+        style="
+          width: 100%;
+          border-collapse: collapse;
+          border: 0px solid transparent;
+          border-spacing: 0;
+          text-align: center;
+        "
+      >
+        <tr>
+          <td {{page.props.header}}>
+            <img
+              src="https://assets.unlayer.com/projects/93542/1659979140790-Asset%201convite-1.png"
+              alt="log da criptomaníacos"
+              width="42"
+              style="width: 42px; max-width: 42px; margin: 16px"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td {{page.props.main}} align="left">{{content}}</td>
+        </tr>
+        <tr>
+          <td {{page.props.footer}}>
+            <p class="EmailOnly">{unsubscribe_text}</p>
+            <p>DISCLAIMER:</p>
+            <p>
+              Este relatório tem mero caráter informativo e educacional, não
+              servindo de recomendação de compra ou venda para nenhum ativo.
+            </p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

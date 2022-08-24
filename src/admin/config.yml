@@ -1,0 +1,73 @@
+backend:
+  name: github
+  repo: criptomaniacos-io/cm-newsletter-jekyll
+  branch: main # Branch to update (optional; defaults to master)
+local_backend: true
+publish_mode: editorial_workflow
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: criptomaniacos
+    api_key: 663483682384579
+slug:
+  encoding: "unicode"
+  clean_accents: true
+  sanitize_replacement: "_"
+collections:
+  - name: 'newsletter_telescopio'
+    label: 'Telescópio Cripto'
+    folder: 'src/newsletter/telescopio-cripto/_posts/'
+    create: true
+    identifier_field: date
+    slug: "{{year}}-{{month}}-{{day}}-index"
+    preview_path: newsletter/telescopio-cripto/{{slug}}
+    summary: '{{year}}-{{month}}-{{day}} {{title}}'
+    editor:
+      preview: false
+    fields:
+      - {label: "Publish Date", name: "date", widget: "date"}
+      - {name: "title", required: false}
+      - {name: "layout", widget: "select", options: ['telescopio_cripto_v1'], default: 'telescopio_cripto_v1'}
+      - name: "blocks"
+        summary: "{{fields.bg_color}}"
+        widget: "list"
+        fields:
+          - name: "bg_color"
+            widget: "select"
+            options:
+              - {label: verde, value: "#00bb7e"}
+              - {label: branco, value: "#fff"}
+              - {label: cinza, value: "#f0f0f0"}
+          - name: "align"
+            widget: "select"
+            options: ['left', 'center', 'right']
+            default: 'left'
+          - name: "items"
+            widget: "list"
+            summary: "{{fields.include}}"
+            fields:
+            - name: "include"
+              widget: "select"
+              options:
+                - "telescopio_v1_cabeca_01.html"
+                - "telescopio_v1_paragrafos.html"
+                - "telescopio_v1_balao_01.html"
+                - "telescopio_v1_imagem.html"
+                - "telescopio_v1_titulo_tracinho.html"
+                - "telescopio_v1_titulo_balao_branco.html"
+                - "telescopio_v1_titulo_balao_verde.html"
+                - "telescopio_v1_titulo_quadrado_branco.html"
+                - "telescopio_v1_titulo_quadrado_verde.html"
+                - "telescopio_v1_ad_youtube.html"
+                - "telescopio_v1_ad_instagram.html"
+                - "telescopio_v1_ad_produto_01.html"
+            - name: "data"
+              widget: "object"
+              required: false
+              fields:
+                - {name: "title", required: false}
+                - {name: "text", widget: "text", required: false}
+                - {name: "link", required: false}
+                - {name: "img", widget: "image", required: false}
+      - {label: "Anotação (não publicado)", name: "body", widget: "markdown", required: false}
+

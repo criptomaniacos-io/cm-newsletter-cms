@@ -1,0 +1,38 @@
+<!-- simple html to redirect to a page -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="x-apple-disable-message-reformatting">
+    <!-- redirect by meta tag -->
+    <meta http-equiv="refresh" content="0; url={{page.link}}">
+    <title>Redirecting...</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        background: #000;
+        color: #ccc;
+        font-family: Arial, sans-serif;
+      }
+      .EmailOnly {
+        margin-top: 120px;
+      }
+    </style>
+  </head>
+  <body style="margin: 0; padding: 0; background: #141414; color: #000">
+    <div class="EmailOnly" style="display: inline-block; width: 100%">
+      <p style="text-align: center; font-size: 14px; line-height: 140%">
+        <a
+          href="{{page.link}}"
+          style="text-decoration: none; color: #ccc"
+          >Caso não tenha sido redirecionado ainda. Clique aqui.</a
+        >
+      </a>
+      <script>
+        window.location.href = "{{page.link}}";
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<tr style="background:{{include.bg}};">
+  <td align="{{include.align}}" style="padding: 0">
+    <div>
+      <a
+        href="{{include.data.link}}"
+        target="_blank"
+        rel="noopener"
+        style="display: block; width: 100%; max-width: 100%"
+      >
+        {% if include.data.image %}
+        <img
+          src="{{include.data.image}}"
+          alt="{{include.data.title}}"
+          width="100%"
+          style="width: 100%; max-width: 100%"
+        />
+        {% else %}
+        <img
+          src="https://res.cloudinary.com/criptomaniacos/image/upload/v1661372040/telescopio/social/youtube_com_guilherme_criptomaniacos_xpya2y.png"
+          alt="criptomaniacos no instagram"
+          width="100%"
+          style="width: 100%; max-width: 100%"
+        />
+        {% endif %}
+      </a>
+    </div>
+  </td>
+</tr>
+<tr>
+  <td
+    align="{{include.align}}"
+    style="padding: 24px; background: {{include.bg}}"
+  >
+    {% assign paragraphs = include.data.text | split: "<br />" %} {% for
+    paragraph in paragraphs %}
+    <p>{{paragraph}}</p>
+    {% endfor %}
+
+    <a
+      href="{{include.data.link}}"
+      target="_blank"
+      rel="noopener"
+      style="display:inline-block;text-align: center; font-weight:bold; padding: 16px; margin:0; width: 92%; text-decoration: none; color: black; cursor: pointer;border-radius: 4px; background: {{site.data.color.telescopio.v1.verde}};"
+      >CLIQUE AQUI PARA ASSISTIR</a
+    >
+
+    <p>{{include.data.title}}</p>
+  </td>
+</tr>
