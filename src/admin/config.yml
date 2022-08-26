@@ -20,7 +20,7 @@ collections:
     create: true
     identifier_field: date
     slug: "{{year}}-{{month}}-{{day}}-index"
-    preview_path: newsletter/telescopio-cripto/{{slug}}
+    preview_path: newsletter/telescopio-cripto/{{year}}/{{month}}/{{day}}
     summary: '{{year}}-{{month}}-{{day}} {{title}}'
     editor:
       preview: false
