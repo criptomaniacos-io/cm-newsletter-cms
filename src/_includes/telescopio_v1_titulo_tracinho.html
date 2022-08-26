@@ -43,3 +43,6 @@
     <h2><br />{{ include.data.title }}</h2>
   </td>
 </tr>
+
+{% if include.data.text %} {% include telescopio_v1_paragrafos.html
+data=include.data bg=include.bg %} {% endif %}
