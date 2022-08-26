@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: criptomaniacos-io/cm-newsletter-jekyll
+  repo: criptomaniacos-io/cm-newsletter-cms
   branch: main # Branch to update (optional; defaults to master)
 local_backend: true
 publish_mode: editorial_workflow
