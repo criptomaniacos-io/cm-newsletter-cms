@@ -61,6 +61,8 @@ collections:
                 - "telescopio_v1_ad_youtube.html"
                 - "telescopio_v1_ad_instagram.html"
                 - "telescopio_v1_ad_produto_01.html"
+                - "telescopio_v1_ad_produto_chodl.html"
+                - "telescopio_v1_ad_produto_caltseason.html"
             - name: "data"
               widget: "object"
               required: false
