@@ -1,0 +1,33 @@
+<tr style="background:{{include.bg}};">
+  <td>
+    <div>
+      {% if include.data.link %}
+      <a
+        href="{{include.data.link}}"
+        target="_blank"
+        rel="noopener"
+        style="display: block; width: 100%; max-width: 100%"
+      >
+        <img
+          src="{{include.data.img}}"
+          alt="{{include.data.title}}"
+          width="100%"
+          style="width: 100%; max-width: 100%"
+        />
+      </a>
+      {% else %}
+      <img
+        src="{{include.data.img}}"
+        alt="{{include.data.title}}"
+        width="100%"
+        style="width: 100%; max-width: 100%"
+      />
+
+      {% endif %} {% if include.data.text %}
+      <p style="text-align: right; font-size: 12px; margin: 0; padding: 0">
+        {{include.data.text}}
+      </p>
+      {% endif %}
+    </div>
+  </td>
+</tr>
